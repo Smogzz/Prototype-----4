@@ -19,4 +19,5 @@ public class Enemy : MonoBehaviour
     {
         enemyRb.AddForce((player.transform.position - transform.position).normalized * speed);
     }
+     
 }
