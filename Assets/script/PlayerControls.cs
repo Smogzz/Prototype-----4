@@ -24,6 +24,7 @@ public class PlayerControls : MonoBehaviour
         float forwardInput = Input.GetAxis("Vertical");
         playerRb.AddForce(focalPoint.transform.forward * speed * forwardInput);
         powerupIndicator.transform.position = transform.position + new Vector3(0, -0.5f, 0);
+       
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -41,6 +42,7 @@ public class PlayerControls : MonoBehaviour
         hasPowerup = false;
         powerupIndicator.gameObject.SetActive(false);
     }
+    
     private void OnCollisionEnter(Collision collision)
      {
         if (collision.gameObject.CompareTag("Enemy") && hasPowerup)
