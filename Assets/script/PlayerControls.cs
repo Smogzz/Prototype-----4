@@ -23,6 +23,7 @@ public class PlayerControls : MonoBehaviour
     {
         float forwardInput = Input.GetAxis("Vertical");
         playerRb.AddForce(focalPoint.transform.forward * speed * forwardInput);
+          if (transform.position.y < -10){ Destroy(gameObject);}
         powerupIndicator.transform.position = transform.position + new Vector3(0, -0.5f, 0);
        
     }
